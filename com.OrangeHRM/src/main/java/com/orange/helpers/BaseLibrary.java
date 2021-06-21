@@ -34,6 +34,8 @@ import ru.yandex.qatools.ashot.shooting.ShootingStrategies;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseLibrary {
+	
+	// test
 	public static WebDriver driver;
 	public final int IMPLICIT_TIMEOUT = 10;
 	public String baseURL;
