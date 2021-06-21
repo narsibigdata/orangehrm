@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="3" guice-stage="DEVELOPMENT" name="Failed suite [eCommerce_redlion.com]" parallel="tests">
+  <parameter name="browser" value="chrome"/>
+  <parameter name="url" value="https://redlion.com"/>
+  <test thread-count="3" name="RewardsProfilePageTest(failed)" parallel="tests">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="com.ecommerce.redlion.test.ProfilePageTests">
+        <methods>
+          <include name="getInstance"/>
+          <include name="setDriver"/>
+          <include name="validationOfProfilePage_AccountSettings_ManagePaymentMethods"/>
+          <include name="validationOfProfilePage_UpdatingCommunicationPreferences"/>
+          <include name="validationOfDeletionOfCreditCard_ManagePaymentPopUp"/>
+          <include name="validationOfCreditCardAddition_InvalidData"/>
+          <include name="validationOfMasterPass"/>
+          <include name="validationOfAdditionOfCreditCard_ManagePaymentPopUp"/>
+          <include name="validationOfCreditCardAddition_ValidData"/>
+          <include name="quitDriver"/>
+        </methods>
+      </class> <!-- com.ecommerce.redlion.test.ProfilePageTests -->
+    </classes>
+  </test> <!-- RewardsProfilePageTest(failed) -->
+</suite> <!-- Failed suite [eCommerce_redlion.com] -->

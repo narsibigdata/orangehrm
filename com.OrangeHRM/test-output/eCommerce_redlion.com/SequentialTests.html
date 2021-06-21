@@ -1,0 +1,702 @@
+<html>
+<head>
+<title>TestNG:  SequentialTests</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>SequentialTests</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>46/7/0</td>
+</tr><tr>
+<td>Started on:</td><td>Wed Mar 11 09:47:18 IST 2020</td>
+</tr>
+<tr><td>Total time:</td><td>3269 seconds (3269206 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.ecommerce.redlion.test.ProfilePageTests.validationOfAdditionOfCreditCard_ManagePaymentPopUp()'><b>validationOfAdditionOfCreditCard_ManagePaymentPopUp</b><br>Test class: com.ecommerce.redlion.test.ProfilePageTests</td>
+<td><div><pre>java.lang.IllegalArgumentException: Width (0) and height (0) must be &gt; 0
+	at java.awt.image.SampleModel.&lt;init&gt;(SampleModel.java:126)
+	at java.awt.image.ComponentSampleModel.&lt;init&gt;(ComponentSampleModel.java:146)
+	at java.awt.image.PixelInterleavedSampleModel.&lt;init&gt;(PixelInterleavedSampleModel.java:87)
+	at java.awt.image.Raster.createInterleavedRaster(Raster.java:641)
+	at java.awt.image.Raster.createInterleavedRaster(Raster.java:278)
+	at java.awt.image.BufferedImage.&lt;init&gt;(BufferedImage.java:376)
+	at ru.yandex.qatools.ashot.shooting.ViewportPastingDecorator.getScreenshot(ViewportPastingDecorator.java:46)
+	at ru.yandex.qatools.ashot.shooting.ViewportPastingDecorator.getScreenshot(ViewportPastingDecorator.java:35)
+	at ru.yandex.qatools.ashot.AShot.takeScreenshot(AShot.java:143)
+	at com.ecommerce.redlion.helpers.BaseLibrary.takeScreenShotError(BaseLibrary.java:140)
+	at com.ecommerce.redlion.test.ProfilePageTests.validationOfAdditionOfCreditCard_ManagePaymentPopUp(ProfilePageTests.java:168)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace884109818", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace884109818'><pre>java.lang.IllegalArgumentException: Width (0) and height (0) must be &gt; 0
+	at java.awt.image.SampleModel.&lt;init&gt;(SampleModel.java:126)
+	at java.awt.image.ComponentSampleModel.&lt;init&gt;(ComponentSampleModel.java:146)
+	at java.awt.image.PixelInterleavedSampleModel.&lt;init&gt;(PixelInterleavedSampleModel.java:87)
+	at java.awt.image.Raster.createInterleavedRaster(Raster.java:641)
+	at java.awt.image.Raster.createInterleavedRaster(Raster.java:278)
+	at java.awt.image.BufferedImage.&lt;init&gt;(BufferedImage.java:376)
+	at ru.yandex.qatools.ashot.shooting.ViewportPastingDecorator.getScreenshot(ViewportPastingDecorator.java:46)
+	at ru.yandex.qatools.ashot.shooting.ViewportPastingDecorator.getScreenshot(ViewportPastingDecorator.java:35)
+	at ru.yandex.qatools.ashot.AShot.takeScreenshot(AShot.java:143)
+	at com.ecommerce.redlion.helpers.BaseLibrary.takeScreenShotError(BaseLibrary.java:140)
+	at com.ecommerce.redlion.test.ProfilePageTests.validationOfAdditionOfCreditCard_ManagePaymentPopUp(ProfilePageTests.java:168)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>52</td>
+<td>com.ecommerce.redlion.test.ProfilePageTests@8c6030b</td></tr>
+<tr>
+<td title='com.ecommerce.redlion.test.ProfilePageTests.validationOfCreditCardAddition_InvalidData()'><b>validationOfCreditCardAddition_InvalidData</b><br>Test class: com.ecommerce.redlion.test.ProfilePageTests</td>
+<td><div><pre>java.lang.IllegalArgumentException: Width (0) and height (0) must be &gt; 0
+	at java.awt.image.SampleModel.&lt;init&gt;(SampleModel.java:126)
+	at java.awt.image.ComponentSampleModel.&lt;init&gt;(ComponentSampleModel.java:146)
+	at java.awt.image.PixelInterleavedSampleModel.&lt;init&gt;(PixelInterleavedSampleModel.java:87)
+	at java.awt.image.Raster.createInterleavedRaster(Raster.java:641)
+	at java.awt.image.Raster.createInterleavedRaster(Raster.java:278)
+	at java.awt.image.BufferedImage.&lt;init&gt;(BufferedImage.java:376)
+	at ru.yandex.qatools.ashot.shooting.ViewportPastingDecorator.getScreenshot(ViewportPastingDecorator.java:46)
+	at ru.yandex.qatools.ashot.shooting.ViewportPastingDecorator.getScreenshot(ViewportPastingDecorator.java:35)
+	at ru.yandex.qatools.ashot.AShot.takeScreenshot(AShot.java:143)
+	at com.ecommerce.redlion.helpers.BaseLibrary.takeScreenShotError(BaseLibrary.java:140)
+	at com.ecommerce.redlion.test.ProfilePageTests.validationOfCreditCardAddition_InvalidData(ProfilePageTests.java:95)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1310270513", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1310270513'><pre>java.lang.IllegalArgumentException: Width (0) and height (0) must be &gt; 0
+	at java.awt.image.SampleModel.&lt;init&gt;(SampleModel.java:126)
+	at java.awt.image.ComponentSampleModel.&lt;init&gt;(ComponentSampleModel.java:146)
+	at java.awt.image.PixelInterleavedSampleModel.&lt;init&gt;(PixelInterleavedSampleModel.java:87)
+	at java.awt.image.Raster.createInterleavedRaster(Raster.java:641)
+	at java.awt.image.Raster.createInterleavedRaster(Raster.java:278)
+	at java.awt.image.BufferedImage.&lt;init&gt;(BufferedImage.java:376)
+	at ru.yandex.qatools.ashot.shooting.ViewportPastingDecorator.getScreenshot(ViewportPastingDecorator.java:46)
+	at ru.yandex.qatools.ashot.shooting.ViewportPastingDecorator.getScreenshot(ViewportPastingDecorator.java:35)
+	at ru.yandex.qatools.ashot.AShot.takeScreenshot(AShot.java:143)
+	at com.ecommerce.redlion.helpers.BaseLibrary.takeScreenShotError(BaseLibrary.java:140)
+	at com.ecommerce.redlion.test.ProfilePageTests.validationOfCreditCardAddition_InvalidData(ProfilePageTests.java:95)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>52</td>
+<td>com.ecommerce.redlion.test.ProfilePageTests@8c6030b</td></tr>
+<tr>
+<td title='com.ecommerce.redlion.test.ProfilePageTests.validationOfCreditCardAddition_ValidData()'><b>validationOfCreditCardAddition_ValidData</b><br>Test class: com.ecommerce.redlion.test.ProfilePageTests</td>
+<td><div><pre>java.lang.IllegalArgumentException: Width (0) and height (0) must be &gt; 0
+	at java.awt.image.SampleModel.&lt;init&gt;(SampleModel.java:126)
+	at java.awt.image.ComponentSampleModel.&lt;init&gt;(ComponentSampleModel.java:146)
+	at java.awt.image.PixelInterleavedSampleModel.&lt;init&gt;(PixelInterleavedSampleModel.java:87)
+	at java.awt.image.Raster.createInterleavedRaster(Raster.java:641)
+	at java.awt.image.Raster.createInterleavedRaster(Raster.java:278)
+	at java.awt.image.BufferedImage.&lt;init&gt;(BufferedImage.java:376)
+	at ru.yandex.qatools.ashot.shooting.ViewportPastingDecorator.getScreenshot(ViewportPastingDecorator.java:46)
+	at ru.yandex.qatools.ashot.shooting.ViewportPastingDecorator.getScreenshot(ViewportPastingDecorator.java:35)
+	at ru.yandex.qatools.ashot.AShot.takeScreenshot(AShot.java:143)
+	at com.ecommerce.redlion.helpers.BaseLibrary.takeScreenShotError(BaseLibrary.java:140)
+	at com.ecommerce.redlion.test.ProfilePageTests.validationOfCreditCardAddition_ValidData(ProfilePageTests.java:120)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1537011903", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1537011903'><pre>java.lang.IllegalArgumentException: Width (0) and height (0) must be &gt; 0
+	at java.awt.image.SampleModel.&lt;init&gt;(SampleModel.java:126)
+	at java.awt.image.ComponentSampleModel.&lt;init&gt;(ComponentSampleModel.java:146)
+	at java.awt.image.PixelInterleavedSampleModel.&lt;init&gt;(PixelInterleavedSampleModel.java:87)
+	at java.awt.image.Raster.createInterleavedRaster(Raster.java:641)
+	at java.awt.image.Raster.createInterleavedRaster(Raster.java:278)
+	at java.awt.image.BufferedImage.&lt;init&gt;(BufferedImage.java:376)
+	at ru.yandex.qatools.ashot.shooting.ViewportPastingDecorator.getScreenshot(ViewportPastingDecorator.java:46)
+	at ru.yandex.qatools.ashot.shooting.ViewportPastingDecorator.getScreenshot(ViewportPastingDecorator.java:35)
+	at ru.yandex.qatools.ashot.AShot.takeScreenshot(AShot.java:143)
+	at com.ecommerce.redlion.helpers.BaseLibrary.takeScreenShotError(BaseLibrary.java:140)
+	at com.ecommerce.redlion.test.ProfilePageTests.validationOfCreditCardAddition_ValidData(ProfilePageTests.java:120)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>52</td>
+<td>com.ecommerce.redlion.test.ProfilePageTests@8c6030b</td></tr>
+<tr>
+<td title='com.ecommerce.redlion.test.ProfilePageTests.validationOfDeletionOfCreditCard_ManagePaymentPopUp()'><b>validationOfDeletionOfCreditCard_ManagePaymentPopUp</b><br>Test class: com.ecommerce.redlion.test.ProfilePageTests</td>
+<td><div><pre>java.lang.IllegalArgumentException: Width (0) and height (0) must be &gt; 0
+	at java.awt.image.SampleModel.&lt;init&gt;(SampleModel.java:126)
+	at java.awt.image.ComponentSampleModel.&lt;init&gt;(ComponentSampleModel.java:146)
+	at java.awt.image.PixelInterleavedSampleModel.&lt;init&gt;(PixelInterleavedSampleModel.java:87)
+	at java.awt.image.Raster.createInterleavedRaster(Raster.java:641)
+	at java.awt.image.Raster.createInterleavedRaster(Raster.java:278)
+	at java.awt.image.BufferedImage.&lt;init&gt;(BufferedImage.java:376)
+	at ru.yandex.qatools.ashot.shooting.ViewportPastingDecorator.getScreenshot(ViewportPastingDecorator.java:46)
+	at ru.yandex.qatools.ashot.shooting.ViewportPastingDecorator.getScreenshot(ViewportPastingDecorator.java:35)
+	at ru.yandex.qatools.ashot.AShot.takeScreenshot(AShot.java:143)
+	at com.ecommerce.redlion.helpers.BaseLibrary.takeScreenShotError(BaseLibrary.java:140)
+	at com.ecommerce.redlion.test.ProfilePageTests.validationOfDeletionOfCreditCard_ManagePaymentPopUp(ProfilePageTests.java:192)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1185748560", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1185748560'><pre>java.lang.IllegalArgumentException: Width (0) and height (0) must be &gt; 0
+	at java.awt.image.SampleModel.&lt;init&gt;(SampleModel.java:126)
+	at java.awt.image.ComponentSampleModel.&lt;init&gt;(ComponentSampleModel.java:146)
+	at java.awt.image.PixelInterleavedSampleModel.&lt;init&gt;(PixelInterleavedSampleModel.java:87)
+	at java.awt.image.Raster.createInterleavedRaster(Raster.java:641)
+	at java.awt.image.Raster.createInterleavedRaster(Raster.java:278)
+	at java.awt.image.BufferedImage.&lt;init&gt;(BufferedImage.java:376)
+	at ru.yandex.qatools.ashot.shooting.ViewportPastingDecorator.getScreenshot(ViewportPastingDecorator.java:46)
+	at ru.yandex.qatools.ashot.shooting.ViewportPastingDecorator.getScreenshot(ViewportPastingDecorator.java:35)
+	at ru.yandex.qatools.ashot.AShot.takeScreenshot(AShot.java:143)
+	at com.ecommerce.redlion.helpers.BaseLibrary.takeScreenShotError(BaseLibrary.java:140)
+	at com.ecommerce.redlion.test.ProfilePageTests.validationOfDeletionOfCreditCard_ManagePaymentPopUp(ProfilePageTests.java:192)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>52</td>
+<td>com.ecommerce.redlion.test.ProfilePageTests@8c6030b</td></tr>
+<tr>
+<td title='com.ecommerce.redlion.test.ProfilePageTests.validationOfMasterPass()'><b>validationOfMasterPass</b><br>Test class: com.ecommerce.redlion.test.ProfilePageTests</td>
+<td><div><pre>java.lang.IllegalArgumentException: Width (0) and height (0) must be &gt; 0
+	at java.awt.image.SampleModel.&lt;init&gt;(SampleModel.java:126)
+	at java.awt.image.ComponentSampleModel.&lt;init&gt;(ComponentSampleModel.java:146)
+	at java.awt.image.PixelInterleavedSampleModel.&lt;init&gt;(PixelInterleavedSampleModel.java:87)
+	at java.awt.image.Raster.createInterleavedRaster(Raster.java:641)
+	at java.awt.image.Raster.createInterleavedRaster(Raster.java:278)
+	at java.awt.image.BufferedImage.&lt;init&gt;(BufferedImage.java:376)
+	at ru.yandex.qatools.ashot.shooting.ViewportPastingDecorator.getScreenshot(ViewportPastingDecorator.java:46)
+	at ru.yandex.qatools.ashot.shooting.ViewportPastingDecorator.getScreenshot(ViewportPastingDecorator.java:35)
+	at ru.yandex.qatools.ashot.AShot.takeScreenshot(AShot.java:143)
+	at com.ecommerce.redlion.helpers.BaseLibrary.takeScreenShotError(BaseLibrary.java:140)
+	at com.ecommerce.redlion.test.ProfilePageTests.validationOfMasterPass(ProfilePageTests.java:144)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1779159112", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1779159112'><pre>java.lang.IllegalArgumentException: Width (0) and height (0) must be &gt; 0
+	at java.awt.image.SampleModel.&lt;init&gt;(SampleModel.java:126)
+	at java.awt.image.ComponentSampleModel.&lt;init&gt;(ComponentSampleModel.java:146)
+	at java.awt.image.PixelInterleavedSampleModel.&lt;init&gt;(PixelInterleavedSampleModel.java:87)
+	at java.awt.image.Raster.createInterleavedRaster(Raster.java:641)
+	at java.awt.image.Raster.createInterleavedRaster(Raster.java:278)
+	at java.awt.image.BufferedImage.&lt;init&gt;(BufferedImage.java:376)
+	at ru.yandex.qatools.ashot.shooting.ViewportPastingDecorator.getScreenshot(ViewportPastingDecorator.java:46)
+	at ru.yandex.qatools.ashot.shooting.ViewportPastingDecorator.getScreenshot(ViewportPastingDecorator.java:35)
+	at ru.yandex.qatools.ashot.AShot.takeScreenshot(AShot.java:143)
+	at com.ecommerce.redlion.helpers.BaseLibrary.takeScreenShotError(BaseLibrary.java:140)
+	at com.ecommerce.redlion.test.ProfilePageTests.validationOfMasterPass(ProfilePageTests.java:144)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>52</td>
+<td>com.ecommerce.redlion.test.ProfilePageTests@8c6030b</td></tr>
+<tr>
+<td title='com.ecommerce.redlion.test.ProfilePageTests.validationOfProfilePage_AccountSettings_ManagePaymentMethods()'><b>validationOfProfilePage_AccountSettings_ManagePaymentMethods</b><br>Test class: com.ecommerce.redlion.test.ProfilePageTests</td>
+<td><div><pre>java.lang.IllegalArgumentException: Width (0) and height (0) must be &gt; 0
+	at java.awt.image.SampleModel.&lt;init&gt;(SampleModel.java:126)
+	at java.awt.image.ComponentSampleModel.&lt;init&gt;(ComponentSampleModel.java:146)
+	at java.awt.image.PixelInterleavedSampleModel.&lt;init&gt;(PixelInterleavedSampleModel.java:87)
+	at java.awt.image.Raster.createInterleavedRaster(Raster.java:641)
+	at java.awt.image.Raster.createInterleavedRaster(Raster.java:278)
+	at java.awt.image.BufferedImage.&lt;init&gt;(BufferedImage.java:376)
+	at ru.yandex.qatools.ashot.shooting.ViewportPastingDecorator.getScreenshot(ViewportPastingDecorator.java:46)
+	at ru.yandex.qatools.ashot.shooting.ViewportPastingDecorator.getScreenshot(ViewportPastingDecorator.java:35)
+	at ru.yandex.qatools.ashot.AShot.takeScreenshot(AShot.java:143)
+	at com.ecommerce.redlion.helpers.BaseLibrary.takeScreenShotError(BaseLibrary.java:140)
+	at com.ecommerce.redlion.test.ProfilePageTests.validationOfProfilePage_AccountSettings_ManagePaymentMethods(ProfilePageTests.java:72)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1012909576", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1012909576'><pre>java.lang.IllegalArgumentException: Width (0) and height (0) must be &gt; 0
+	at java.awt.image.SampleModel.&lt;init&gt;(SampleModel.java:126)
+	at java.awt.image.ComponentSampleModel.&lt;init&gt;(ComponentSampleModel.java:146)
+	at java.awt.image.PixelInterleavedSampleModel.&lt;init&gt;(PixelInterleavedSampleModel.java:87)
+	at java.awt.image.Raster.createInterleavedRaster(Raster.java:641)
+	at java.awt.image.Raster.createInterleavedRaster(Raster.java:278)
+	at java.awt.image.BufferedImage.&lt;init&gt;(BufferedImage.java:376)
+	at ru.yandex.qatools.ashot.shooting.ViewportPastingDecorator.getScreenshot(ViewportPastingDecorator.java:46)
+	at ru.yandex.qatools.ashot.shooting.ViewportPastingDecorator.getScreenshot(ViewportPastingDecorator.java:35)
+	at ru.yandex.qatools.ashot.AShot.takeScreenshot(AShot.java:143)
+	at com.ecommerce.redlion.helpers.BaseLibrary.takeScreenShotError(BaseLibrary.java:140)
+	at com.ecommerce.redlion.test.ProfilePageTests.validationOfProfilePage_AccountSettings_ManagePaymentMethods(ProfilePageTests.java:72)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>171</td>
+<td>com.ecommerce.redlion.test.ProfilePageTests@8c6030b</td></tr>
+<tr>
+<td title='com.ecommerce.redlion.test.ProfilePageTests.validationOfProfilePage_UpdatingCommunicationPreferences()'><b>validationOfProfilePage_UpdatingCommunicationPreferences</b><br>Test class: com.ecommerce.redlion.test.ProfilePageTests</td>
+<td><div><pre>java.lang.IllegalArgumentException: Width (0) and height (0) must be &gt; 0
+	at java.awt.image.SampleModel.&lt;init&gt;(SampleModel.java:126)
+	at java.awt.image.ComponentSampleModel.&lt;init&gt;(ComponentSampleModel.java:146)
+	at java.awt.image.PixelInterleavedSampleModel.&lt;init&gt;(PixelInterleavedSampleModel.java:87)
+	at java.awt.image.Raster.createInterleavedRaster(Raster.java:641)
+	at java.awt.image.Raster.createInterleavedRaster(Raster.java:278)
+	at java.awt.image.BufferedImage.&lt;init&gt;(BufferedImage.java:376)
+	at ru.yandex.qatools.ashot.shooting.ViewportPastingDecorator.getScreenshot(ViewportPastingDecorator.java:46)
+	at ru.yandex.qatools.ashot.shooting.ViewportPastingDecorator.getScreenshot(ViewportPastingDecorator.java:35)
+	at ru.yandex.qatools.ashot.AShot.takeScreenshot(AShot.java:143)
+	at com.ecommerce.redlion.helpers.BaseLibrary.takeScreenShotError(BaseLibrary.java:140)
+	at com.ecommerce.redlion.test.ProfilePageTests.validationOfProfilePage_UpdatingCommunicationPreferences(ProfilePageTests.java:217)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace696706326", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace696706326'><pre>java.lang.IllegalArgumentException: Width (0) and height (0) must be &gt; 0
+	at java.awt.image.SampleModel.&lt;init&gt;(SampleModel.java:126)
+	at java.awt.image.ComponentSampleModel.&lt;init&gt;(ComponentSampleModel.java:146)
+	at java.awt.image.PixelInterleavedSampleModel.&lt;init&gt;(PixelInterleavedSampleModel.java:87)
+	at java.awt.image.Raster.createInterleavedRaster(Raster.java:641)
+	at java.awt.image.Raster.createInterleavedRaster(Raster.java:278)
+	at java.awt.image.BufferedImage.&lt;init&gt;(BufferedImage.java:376)
+	at ru.yandex.qatools.ashot.shooting.ViewportPastingDecorator.getScreenshot(ViewportPastingDecorator.java:46)
+	at ru.yandex.qatools.ashot.shooting.ViewportPastingDecorator.getScreenshot(ViewportPastingDecorator.java:35)
+	at ru.yandex.qatools.ashot.AShot.takeScreenshot(AShot.java:143)
+	at com.ecommerce.redlion.helpers.BaseLibrary.takeScreenShotError(BaseLibrary.java:140)
+	at com.ecommerce.redlion.test.ProfilePageTests.validationOfProfilePage_UpdatingCommunicationPreferences(ProfilePageTests.java:217)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>52</td>
+<td>com.ecommerce.redlion.test.ProfilePageTests@8c6030b</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.ecommerce.redlion.test.HomePageTest.homePageCalenderValdation()'><b>homePageCalenderValdation</b><br>Test class: com.ecommerce.redlion.test.HomePageTest</td>
+<td></td>
+<td>15</td>
+<td>com.ecommerce.redlion.test.HomePageTest@2edd4b9f</td></tr>
+<tr>
+<td title='com.ecommerce.redlion.test.HomePageTest.homePageEachLocationSearchValdation()'><b>homePageEachLocationSearchValdation</b><br>Test class: com.ecommerce.redlion.test.HomePageTest</td>
+<td></td>
+<td>30</td>
+<td>com.ecommerce.redlion.test.HomePageTest@2edd4b9f</td></tr>
+<tr>
+<td title='com.ecommerce.redlion.test.HomePageTest.homePageFooterValdation()'><b>homePageFooterValdation</b><br>Test class: com.ecommerce.redlion.test.HomePageTest</td>
+<td></td>
+<td>191</td>
+<td>com.ecommerce.redlion.test.HomePageTest@2edd4b9f</td></tr>
+<tr>
+<td title='com.ecommerce.redlion.test.PasswordResetTest.homePageHeaderTabsValdation()'><b>homePageHeaderTabsValdation</b><br>Test class: com.ecommerce.redlion.test.PasswordResetTest</td>
+<td></td>
+<td>20</td>
+<td>com.ecommerce.redlion.test.PasswordResetTest@1878815a</td></tr>
+<tr>
+<td title='com.ecommerce.redlion.test.HomePageTest.homePageHeaderTabsValdation()'><b>homePageHeaderTabsValdation</b><br>Test class: com.ecommerce.redlion.test.HomePageTest</td>
+<td></td>
+<td>1</td>
+<td>com.ecommerce.redlion.test.HomePageTest@2edd4b9f</td></tr>
+<tr>
+<td title='com.ecommerce.redlion.test.HomePageTest.homePageHelloRewardsValdation()'><b>homePageHelloRewardsValdation</b><br>Test class: com.ecommerce.redlion.test.HomePageTest</td>
+<td></td>
+<td>8</td>
+<td>com.ecommerce.redlion.test.HomePageTest@2edd4b9f</td></tr>
+<tr>
+<td title='com.ecommerce.redlion.test.HomePageTest.homePageLocationSearchValdation()'><b>homePageLocationSearchValdation</b><br>Test class: com.ecommerce.redlion.test.HomePageTest</td>
+<td></td>
+<td>6</td>
+<td>com.ecommerce.redlion.test.HomePageTest@2edd4b9f</td></tr>
+<tr>
+<td title='com.ecommerce.redlion.test.HomePageTest.homePagePromotionalCardsValdation()'><b>homePagePromotionalCardsValdation</b><br>Test class: com.ecommerce.redlion.test.HomePageTest</td>
+<td></td>
+<td>1</td>
+<td>com.ecommerce.redlion.test.HomePageTest@2edd4b9f</td></tr>
+<tr>
+<td title='com.ecommerce.redlion.test.HomePageTest.homePageRoomsOccupancyValdation()'><b>homePageRoomsOccupancyValdation</b><br>Test class: com.ecommerce.redlion.test.HomePageTest</td>
+<td></td>
+<td>24</td>
+<td>com.ecommerce.redlion.test.HomePageTest@2edd4b9f</td></tr>
+<tr>
+<td title='com.ecommerce.redlion.test.HomePageTest.homePageSearchBarValdation()'><b>homePageSearchBarValdation</b><br>Test class: com.ecommerce.redlion.test.HomePageTest</td>
+<td></td>
+<td>0</td>
+<td>com.ecommerce.redlion.test.HomePageTest@2edd4b9f</td></tr>
+<tr>
+<td title='com.ecommerce.redlion.test.HomePageTest.homePage_DiscountsValdation()'><b>homePage_DiscountsValdation</b><br>Test class: com.ecommerce.redlion.test.HomePageTest</td>
+<td></td>
+<td>22</td>
+<td>com.ecommerce.redlion.test.HomePageTest@2edd4b9f</td></tr>
+<tr>
+<td title='com.ecommerce.redlion.test.HomePageTest.homePage_HelloRewardsLoginWithValidDataValdation()'><b>homePage_HelloRewardsLoginWithValidDataValdation</b><br>Test class: com.ecommerce.redlion.test.HomePageTest</td>
+<td></td>
+<td>23</td>
+<td>com.ecommerce.redlion.test.HomePageTest@2edd4b9f</td></tr>
+<tr>
+<td title='com.ecommerce.redlion.test.HomePageTest.homePage_UseCurrentLocationValdation()'><b>homePage_UseCurrentLocationValdation</b><br>Test class: com.ecommerce.redlion.test.HomePageTest</td>
+<td></td>
+<td>9</td>
+<td>com.ecommerce.redlion.test.HomePageTest@2edd4b9f</td></tr>
+<tr>
+<td title='com.ecommerce.redlion.test.HomePageTest.homePgHelloRdsValdationWithBlankFlds()'><b>homePgHelloRdsValdationWithBlankFlds</b><br>Test class: com.ecommerce.redlion.test.HomePageTest</td>
+<td></td>
+<td>5</td>
+<td>com.ecommerce.redlion.test.HomePageTest@2edd4b9f</td></tr>
+<tr>
+<td title='com.ecommerce.redlion.test.HomePageTest.homePgHelloRdsValdationWithInvalidData()'><b>homePgHelloRdsValdationWithInvalidData</b><br>Test class: com.ecommerce.redlion.test.HomePageTest</td>
+<td></td>
+<td>11</td>
+<td>com.ecommerce.redlion.test.HomePageTest@2edd4b9f</td></tr>
+<tr>
+<td title='com.ecommerce.redlion.test.ManageReservationsPageTest.manageReservations()'><b>manageReservations</b><br>Test class: com.ecommerce.redlion.test.ManageReservationsPageTest</td>
+<td></td>
+<td>14</td>
+<td>com.ecommerce.redlion.test.ManageReservationsPageTest@727366da</td></tr>
+<tr>
+<td title='com.ecommerce.redlion.test.BrandsPageTests.validateBrandCardDetails()'><b>validateBrandCardDetails</b><br>Test class: com.ecommerce.redlion.test.BrandsPageTests</td>
+<td></td>
+<td>31</td>
+<td>com.ecommerce.redlion.test.BrandsPageTests@53dfb0a8</td></tr>
+<tr>
+<td title='com.ecommerce.redlion.test.BrandsPageTests.validationEachBrandCardDetails()'><b>validationEachBrandCardDetails</b><br>Test class: com.ecommerce.redlion.test.BrandsPageTests</td>
+<td></td>
+<td>487</td>
+<td>com.ecommerce.redlion.test.BrandsPageTests@53dfb0a8</td></tr>
+<tr>
+<td title='com.ecommerce.redlion.test.MeetingsAndEventsPageTest.validationMeetingsAndEvents()'><b>validationMeetingsAndEvents</b><br>Test class: com.ecommerce.redlion.test.MeetingsAndEventsPageTest</td>
+<td></td>
+<td>91</td>
+<td>com.ecommerce.redlion.test.MeetingsAndEventsPageTest@716be52c</td></tr>
+<tr>
+<td title='com.ecommerce.redlion.test.PropertyPageTest.validationOfAmenitiesTabsPropertyPage()'><b>validationOfAmenitiesTabsPropertyPage</b><br>Test class: com.ecommerce.redlion.test.PropertyPageTest</td>
+<td></td>
+<td>8</td>
+<td>com.ecommerce.redlion.test.PropertyPageTest@25afdf7e</td></tr>
+<tr>
+<td title='com.ecommerce.redlion.test.BrandsPageTests.validationOfBrandWebSite_Hotelrl()'><b>validationOfBrandWebSite_Hotelrl</b><br>Test class: com.ecommerce.redlion.test.BrandsPageTests</td>
+<td></td>
+<td>22</td>
+<td>com.ecommerce.redlion.test.BrandsPageTests@53dfb0a8</td></tr>
+<tr>
+<td title='com.ecommerce.redlion.test.BrandsPageTests.validationOfBrandsCountAndImages()'><b>validationOfBrandsCountAndImages</b><br>Test class: com.ecommerce.redlion.test.BrandsPageTests</td>
+<td></td>
+<td>132</td>
+<td>com.ecommerce.redlion.test.BrandsPageTests@53dfb0a8</td></tr>
+<tr>
+<td title='com.ecommerce.redlion.test.MeetingsAndEventsPageTest.validationOfCallUsAndEmail()'><b>validationOfCallUsAndEmail</b><br>Test class: com.ecommerce.redlion.test.MeetingsAndEventsPageTest</td>
+<td></td>
+<td>14</td>
+<td>com.ecommerce.redlion.test.MeetingsAndEventsPageTest@716be52c</td></tr>
+<tr>
+<td title='com.ecommerce.redlion.test.ContactPageTests.validationOfContactPage_InvalidEmailFormSubmission()'><b>validationOfContactPage_InvalidEmailFormSubmission</b><br>Test class: com.ecommerce.redlion.test.ContactPageTests</td>
+<td></td>
+<td>15</td>
+<td>com.ecommerce.redlion.test.ContactPageTests@5f9f5487</td></tr>
+<tr>
+<td title='com.ecommerce.redlion.test.ContactPageTests.validationOfContactPage_Routing_ChatButton()'><b>validationOfContactPage_Routing_ChatButton</b><br>Test class: com.ecommerce.redlion.test.ContactPageTests</td>
+<td></td>
+<td>28</td>
+<td>com.ecommerce.redlion.test.ContactPageTests@5f9f5487</td></tr>
+<tr>
+<td title='com.ecommerce.redlion.test.ContactPageTests.validationOfContactPage_validEmailFormSubmission()'><b>validationOfContactPage_validEmailFormSubmission</b><br>Test class: com.ecommerce.redlion.test.ContactPageTests</td>
+<td></td>
+<td>55</td>
+<td>com.ecommerce.redlion.test.ContactPageTests@5f9f5487</td></tr>
+<tr>
+<td title='com.ecommerce.redlion.test.PropertyPageTest.validationOfContactTabsPropertyPage()'><b>validationOfContactTabsPropertyPage</b><br>Test class: com.ecommerce.redlion.test.PropertyPageTest</td>
+<td></td>
+<td>1</td>
+<td>com.ecommerce.redlion.test.PropertyPageTest@25afdf7e</td></tr>
+<tr>
+<td title='com.ecommerce.redlion.test.HotelLocationsPageTest.validationOfMapView()'><b>validationOfMapView</b><br>Test class: com.ecommerce.redlion.test.HotelLocationsPageTest</td>
+<td></td>
+<td>25</td>
+<td>com.ecommerce.redlion.test.HotelLocationsPageTest@4c0338a7</td></tr>
+<tr>
+<td title='com.ecommerce.redlion.test.HotelLocationsPageTest.validationOfMilesFilterHotelLocationPage()'><b>validationOfMilesFilterHotelLocationPage</b><br>Test class: com.ecommerce.redlion.test.HotelLocationsPageTest</td>
+<td></td>
+<td>24</td>
+<td>com.ecommerce.redlion.test.HotelLocationsPageTest@4c0338a7</td></tr>
+<tr>
+<td title='com.ecommerce.redlion.test.PropertyPageTest.validationOfNavigationTabsPropertyPage()'><b>validationOfNavigationTabsPropertyPage</b><br>Test class: com.ecommerce.redlion.test.PropertyPageTest</td>
+<td></td>
+<td>5</td>
+<td>com.ecommerce.redlion.test.PropertyPageTest@25afdf7e</td></tr>
+<tr>
+<td title='com.ecommerce.redlion.test.PropertyPageTest.validationOfPackagesTabsPropertyPage()'><b>validationOfPackagesTabsPropertyPage</b><br>Test class: com.ecommerce.redlion.test.PropertyPageTest</td>
+<td></td>
+<td>6</td>
+<td>com.ecommerce.redlion.test.PropertyPageTest@25afdf7e</td></tr>
+<tr>
+<td title='com.ecommerce.redlion.test.HotelLocationsPageTest.validationOfPricesFilterHotelLocationPage()'><b>validationOfPricesFilterHotelLocationPage</b><br>Test class: com.ecommerce.redlion.test.HotelLocationsPageTest</td>
+<td></td>
+<td>17</td>
+<td>com.ecommerce.redlion.test.HotelLocationsPageTest@4c0338a7</td></tr>
+<tr>
+<td title='com.ecommerce.redlion.test.ProfilePageTests.validationOfProfilePageDetails()'><b>validationOfProfilePageDetails</b><br>Test class: com.ecommerce.redlion.test.ProfilePageTests</td>
+<td></td>
+<td>48</td>
+<td>com.ecommerce.redlion.test.ProfilePageTests@8c6030b</td></tr>
+<tr>
+<td title='com.ecommerce.redlion.test.ProfilePageTests.validationOfProfilePage_UpdatingUserDetails()'><b>validationOfProfilePage_UpdatingUserDetails</b><br>Test class: com.ecommerce.redlion.test.ProfilePageTests</td>
+<td></td>
+<td>47</td>
+<td>com.ecommerce.redlion.test.ProfilePageTests@8c6030b</td></tr>
+<tr>
+<td title='com.ecommerce.redlion.test.RewardsSignUpTests.validationOfRewardsSignUpPage_Form_ExistingUserData()'><b>validationOfRewardsSignUpPage_Form_ExistingUserData</b><br>Test class: com.ecommerce.redlion.test.RewardsSignUpTests</td>
+<td></td>
+<td>19</td>
+<td>com.ecommerce.redlion.test.RewardsSignUpTests@bc309af</td></tr>
+<tr>
+<td title='com.ecommerce.redlion.test.RewardsSignUpTests.validationOfRewardsSignUpPage_Form_InvalidData()'><b>validationOfRewardsSignUpPage_Form_InvalidData</b><br>Test class: com.ecommerce.redlion.test.RewardsSignUpTests</td>
+<td></td>
+<td>79</td>
+<td>com.ecommerce.redlion.test.RewardsSignUpTests@bc309af</td></tr>
+<tr>
+<td title='com.ecommerce.redlion.test.PropertyPageTest.validationOfRoomType()'><b>validationOfRoomType</b><br>Test class: com.ecommerce.redlion.test.PropertyPageTest</td>
+<td></td>
+<td>38</td>
+<td>com.ecommerce.redlion.test.PropertyPageTest@25afdf7e</td></tr>
+<tr>
+<td title='com.ecommerce.redlion.test.HotelLocationsPageTest.validationOfRoomType()'><b>validationOfRoomType</b><br>Test class: com.ecommerce.redlion.test.HotelLocationsPageTest</td>
+<td></td>
+<td>161</td>
+<td>com.ecommerce.redlion.test.HotelLocationsPageTest@4c0338a7</td></tr>
+<tr>
+<td title='com.ecommerce.redlion.test.PropertyPageTest.validationOfRoomTypesTabsPropertyPage()'><b>validationOfRoomTypesTabsPropertyPage</b><br>Test class: com.ecommerce.redlion.test.PropertyPageTest</td>
+<td></td>
+<td>125</td>
+<td>com.ecommerce.redlion.test.PropertyPageTest@25afdf7e</td></tr>
+<tr>
+<td title='com.ecommerce.redlion.test.SupportPageTests.validationOfSupportPage_BrowseByTopicList()'><b>validationOfSupportPage_BrowseByTopicList</b><br>Test class: com.ecommerce.redlion.test.SupportPageTests</td>
+<td></td>
+<td>416</td>
+<td>com.ecommerce.redlion.test.SupportPageTests@4ce9fe4d</td></tr>
+<tr>
+<td title='com.ecommerce.redlion.test.SupportPageTests.validationOfSupportPage_CategoriesUnderFAQ()'><b>validationOfSupportPage_CategoriesUnderFAQ</b><br>Test class: com.ecommerce.redlion.test.SupportPageTests</td>
+<td></td>
+<td>231</td>
+<td>com.ecommerce.redlion.test.SupportPageTests@4ce9fe4d</td></tr>
+<tr>
+<td title='com.ecommerce.redlion.test.SupportPageTests.validationOfSupportPage_FindAPropertySearch_ChangeLocation()'><b>validationOfSupportPage_FindAPropertySearch_ChangeLocation</b><br>Test class: com.ecommerce.redlion.test.SupportPageTests</td>
+<td></td>
+<td>43</td>
+<td>com.ecommerce.redlion.test.SupportPageTests@4ce9fe4d</td></tr>
+<tr>
+<td title='com.ecommerce.redlion.test.SupportPageTests.validationOfSupportPage_FindAPropertySearch_InValidDetails()'><b>validationOfSupportPage_FindAPropertySearch_InValidDetails</b><br>Test class: com.ecommerce.redlion.test.SupportPageTests</td>
+<td></td>
+<td>20</td>
+<td>com.ecommerce.redlion.test.SupportPageTests@4ce9fe4d</td></tr>
+<tr>
+<td title='com.ecommerce.redlion.test.SupportPageTests.validationOfSupportPage_FindAPropertySearch_ValidDetails()'><b>validationOfSupportPage_FindAPropertySearch_ValidDetails</b><br>Test class: com.ecommerce.redlion.test.SupportPageTests</td>
+<td></td>
+<td>36</td>
+<td>com.ecommerce.redlion.test.SupportPageTests@4ce9fe4d</td></tr>
+<tr>
+<td title='com.ecommerce.redlion.test.SupportPageTests.validationOfSupportPage_HowMayweHelpSearch()'><b>validationOfSupportPage_HowMayweHelpSearch</b><br>Test class: com.ecommerce.redlion.test.SupportPageTests</td>
+<td></td>
+<td>53</td>
+<td>com.ecommerce.redlion.test.SupportPageTests@4ce9fe4d</td></tr>
+<tr>
+<td title='com.ecommerce.redlion.test.SupportPageTests.verifySupportPage_NeedAdditionalHelpButtonsNavigation()'><b>verifySupportPage_NeedAdditionalHelpButtonsNavigation</b><br>Test class: com.ecommerce.redlion.test.SupportPageTests</td>
+<td></td>
+<td>21</td>
+<td>com.ecommerce.redlion.test.SupportPageTests@4ce9fe4d</td></tr>
+</table><p>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test thread-count="5" name="Default test(failed)">
+    <classes>
+      <class name="com.ecommerce.redlion.test.PropertyPageTest">
+        <methods>
+          <include name="getInstance"/>
+          <include name="setDriver"/>
+          <include name="validationOfRoomTypesTabsPropertyPage"/>
+          <include name="validationOfRoomType"/>
+          <include name="quitDriver"/>
+        </methods>
+      </class> <!-- com.ecommerce.redlion.test.PropertyPageTest -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
