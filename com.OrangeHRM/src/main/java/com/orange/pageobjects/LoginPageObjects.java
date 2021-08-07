@@ -146,5 +146,8 @@ public class LoginPageObjects extends BaseLibrary {
 	@FindBy(xpath = "//a[@href='/index.php/auth/logout']")
     public WebElement logout;
 	
-
+	@FindBy(xpath = "//a[@href=\"/register\"]")
+    public WebElement Register;
+	
+	
 }

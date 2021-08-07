@@ -2,14 +2,14 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="eCommerce_.com" > <!-- parallel="tests" thread-count="3"> -->  
 	<parameter name="browser" value="chrome" />
-	<parameter name="url" value="https://opensource-demo.orangehrmlive.com/" />
-	<test name="orangedemoTests">
+	<parameter name="url" value="http://demowebshop.tricentis.com/" />
+	<test name="WebshopDemo Test">
 		
 		<classes>
 		
-	   <class name="com.orange.test.LoginPageTest"> </class>
-	<!--    	<class name="com.orange.test.HomePageTest">  </class>
-		<class name="com.orange.test.HomePageJobsTest"> </class>    -->
+	   <class name="com.webshopDemo.test.LoginPageTest"> </class>
+	<!--    	<class name="com.webshopDemo.test.HomePageTest">  </class>
+		<class name="com.webshopDemo.test.HomePageJobsTest"> </class>    -->
 		</classes>
 	</test>
 	

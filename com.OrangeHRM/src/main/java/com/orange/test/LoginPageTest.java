@@ -115,7 +115,7 @@ public class LoginPageTest extends LoginPageActions {
 
 	}
 	
-	@Test(priority = 5, enabled = true)
+	@Test(priority = 5, enabled = false)
 	public void LoginHEM() throws Throwable {
 
 		logger = extent.startTest("HRM_Login Links Validation");
@@ -134,7 +134,7 @@ public class LoginPageTest extends LoginPageActions {
 
 	}
 
-	@Test(priority = 6, enabled = true)
+	//@Test(priority = 6, enabled = true)
 	public void LogoutHRM() throws Throwable {
 
 		logger = extent.startTest("HRM_Logout Links Validation");
@@ -152,4 +152,24 @@ public class LoginPageTest extends LoginPageActions {
 		} 
 
 	}
+	@Test(priority = 7, enabled = true)
+	public void webshopDemo() throws Throwable {
+
+		logger = extent.startTest("WebDemo Li");
+		try {
+			
+			//validateLoginPage(username,password);
+			WebshopDemo();
+			Thread.sleep(2000);
+			logger.log(LogStatus.PASS,"WebDemo Registration Validation successfully");
+
+		} catch (Exception e) {
+			takeScreenShotHalfPage(driver);
+			e.printStackTrace();
+			logger.log(LogStatus.FAIL, e.getMessage());
+		} 
+
+	}
+	
+	
 }

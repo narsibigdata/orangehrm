@@ -208,6 +208,20 @@ public class LoginPageActions extends UtilityMethods {
 				}
 	}
 
+		public void WebshopDemo() throws Exception {  
+			try {
+			
+				LoginPageObjects RegisterPageobject = new LoginPageObjects(driver,logger);
+				Thread.sleep(5000);
+				RegisterPageobject.Register.click();
+									
+				}
+			
+				catch(Exception e ) {
+					
+					e.printStackTrace();
+				}
+	}
 }
 
 
